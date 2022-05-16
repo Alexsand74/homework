@@ -16,6 +16,7 @@ public class Main {
         long human = 546673782920874L;
         float cake = 3.453f;
         double timber = 458.589624;
+        System.out.println();
 
          /*
 	 Задача 2.
