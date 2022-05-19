@@ -2,7 +2,7 @@ package ru.skypro.homework;
 /*
 Домашнее задние 1.2 Переменные
  */
-public class Main {
+public class CreationVariables {
 
     public static void main(String[] args) {
 	/*
