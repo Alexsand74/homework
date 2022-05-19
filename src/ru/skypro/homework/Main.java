@@ -58,7 +58,8 @@ public class Main {
         int weightBreakfast = thingsBanana * weightBanana + volumeMilk / 100 * weightMilk_100gram
                 + thingsCream * weightCream + thingsEgg * weightEgg;
         System.out.println("Полный вес завтрака из всех продуктов в граммах будет = " + weightBreakfast + " гр");
-        double weightBreakfastKg = (weightBreakfast / 1000 + ((weightBreakfast % 1000) * 0.001));
+        double weightBreakfastKg = (double) weightBreakfast / 1000;
+        //double weightBreakfastKg = (weightBreakfast / 1000 + ((weightBreakfast % 1000) * 0.001));
         System.out.println("Полный вес завтрака из всех продуктов в килограмах будет = " + weightBreakfastKg + " кг");
         System.out.println();
 
