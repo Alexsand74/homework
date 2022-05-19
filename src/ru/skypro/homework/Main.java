@@ -62,6 +62,7 @@ public class Main {
         //double weightBreakfastKg = (weightBreakfast / 1000 + ((weightBreakfast % 1000) * 0.001));
         System.out.println("Полный вес завтрака из всех продуктов в килограмах будет = " + weightBreakfastKg + " кг");
         System.out.println();
+        System.out.println();
 
      /*
      Задача 4.
