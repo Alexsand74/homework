@@ -10,6 +10,7 @@ public class CreationVariables {
     На уроке мы проходили разные типы переменных.
     Объявите переменные всех типов, что мы изучили на уроке, и присвойте им любые значения (инициализируйте их).
 	 */
+        System.out.println(" Задача 1");
         byte box = 45;
         short apple = 25001;
         int car = 869046543;
@@ -28,6 +29,7 @@ public class CreationVariables {
      Подсчитайте и выведите в консоль общий вес двух бойцов.
      Подсчитайте и выведите в консоль разницу между весами бойцов.
 	  */
+        System.out.println(" Задача 2");
         float weightBoxerOne = 78.2f;
         float weightBoxerTwo = 82.7f;
         System.out.println("Общий вес двух боксеров = " + (weightBoxerOne + weightBoxerTwo) + " кг");
@@ -47,6 +49,7 @@ public class CreationVariables {
      Подсчитайте вес (количество грамм) такого спорт-завтрака, а затем переведите его в килограммы.
      Результат напечатайте в консоль
       */
+        System.out.println(" Задача 3");
         int thingsBanana = 5;
         int weightBanana = 800;
         int volumeMilk = 200;
@@ -58,7 +61,8 @@ public class CreationVariables {
         int weightBreakfast = thingsBanana * weightBanana + volumeMilk / 100 * weightMilk_100gram
                 + thingsCream * weightCream + thingsEgg * weightEgg;
         System.out.println("Полный вес завтрака из всех продуктов в граммах будет = " + weightBreakfast + " гр");
-        double weightBreakfastKg = (double) weightBreakfast / 1000;
+        double weightBreakfastKg = weightBreakfast / (1000*1.0);
+        //double weightBreakfastKg = (double) weightBreakfast / 1000;
         //double weightBreakfastKg = (weightBreakfast / 1000 + ((weightBreakfast % 1000) * 0.001));
         System.out.println("Полный вес завтрака из всех продуктов в килограмах будет = " + weightBreakfastKg + " кг");
         System.out.println();
@@ -74,6 +78,7 @@ public class CreationVariables {
      Посчитайте, сколько может потребоваться дней в среднем, чтобы добиться результата похудения.
      Результаты подсчетов выведите в консоль.
       */
+        System.out.println(" Задача 4");
         int weightResetKg = 7;
         int weightKg = 1000;
         int weightLossMinimumDay = 250;
@@ -102,6 +107,7 @@ public class CreationVariables {
      Выведите в консоль информацию по каждому сотруднику.
      Например, “Маша теперь получает **** рублей. Годовой доход вырос на **** рублей”.
       */
+        System.out.println(" Задача 5");
         double moneyOldMonthMasha = 67760;
         double moneyOldMonthDenis = 83690;
         double moneyOldMonthChristina = 76230;
