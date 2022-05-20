@@ -9,6 +9,7 @@ public class ConditionalStatements {
        WebsiteBank();          //Задание 1
        YearOptsionnayaSystem();//Задание 2
        LeapYear();             //Задание 3
+       TimeDelivery();         //Задание 4
     }
     public static void WebsiteBank (){
         /*
@@ -95,6 +96,37 @@ public class ConditionalStatements {
         } else {
             System.out.println( year + " год не является високосным");
         }
+        System.out.println();
+    }
+    public static void  TimeDelivery (){
+        /*
+        Задание 4
+        Вернемся к делам банковским. У нас хороший банк, поэтому для наших клиентов мы организуем доставку
+        банковских карт на дом с четкой датой доставки. Чтобы известить клиента о том, когда будет доставлена
+        его карта, нам нужно знать расстояние от нашего офиса до адреса доставки.
+        Правила доставки такие:
+        Доставка в пределах 20 км занимает сутки.
+        Доставка в пределах от 20 км до 60 км добавляет еще один день доставки.
+        Доставка в пределах 60 км до 100 км добавляет еще одни сутки.
+        То есть с каждым следующим интервалом доставки срок увеличивается на 1 день.
+        Напишите программу, которая выдает сообщение в консоль:
+        "Потребуется дней: " + срок доставки
+        Объявите целочисленную переменную deliveryDistance = 95, которая содержит дистанцию до клиента.
+         */
+        System.out.println(" Задание 4");
+        int deliveryDistance = 5042;
+        int limitation = 20;
+        int stepDistance = 40;
+        int numberDays = 0;
+        if ( deliveryDistance <= limitation) {
+            numberDays = 1;
+        } else {
+                  numberDays = ((deliveryDistance-limitation)/stepDistance) + 1;
+                  if ((deliveryDistance-limitation)%stepDistance > 0){
+                      numberDays++;
+                  }
+                }
+        System.out.println("Потребуется дней: " + numberDays);
         System.out.println();
     }
 }
