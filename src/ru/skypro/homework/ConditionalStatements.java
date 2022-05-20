@@ -115,14 +115,12 @@ public class ConditionalStatements {
         Объявите целочисленную переменную deliveryDistance = 95, которая содержит дистанцию до клиента.
          */
         System.out.println(" Задание 4");
-        int deliveryDistance = 95;
+        int deliveryDistance = 108;
         int limitation = 20;
         int stepDistance = 40;
-        int numberDays = 0;
-        if ( deliveryDistance <= limitation) {
-            numberDays = 1;
-        } else {
-                  numberDays = ((deliveryDistance-limitation)/stepDistance) + 1;
+        int numberDays = 1;
+        if ( deliveryDistance > limitation) {
+                      numberDays += ((deliveryDistance-limitation)/stepDistance);
                   if ((deliveryDistance-limitation)%stepDistance > 0){
                       numberDays++;
                   }
