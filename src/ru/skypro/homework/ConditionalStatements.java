@@ -118,6 +118,7 @@ public class ConditionalStatements {
         int limitation = 20;
         int stepDistance = 40;
         int numberDays = 0;
+
         if ( deliveryDistance <= limitation) {
             numberDays = 1;
         } else {
