@@ -10,6 +10,7 @@ public class ConditionalStatements {
        YearOptsionnayaSystem();//Задание 2
        LeapYear();             //Задание 3
        TimeDelivery();         //Задание 4
+       Month();                //Задание 5
     }
     public static void WebsiteBank (){
         /*
@@ -128,5 +129,57 @@ public class ConditionalStatements {
                 }
         System.out.println("Потребуется дней: " + numberDays);
         System.out.println();
+    }
+    public static void Month (){
+        /*
+        Задание 5
+        Напишите программу, которая определяет по номеру месяца в году, к какому сезону этот месяц принадлежит.
+        Например, 1 месяц (он же январь) принадлежит к сезону зима.
+        Для написания программы используйте оператор switch.
+        Для обозначения номера месяца используйте переменную monthNumber = 12.
+        Пропишите условие, при котором программа не будет выполняться (номер месяца больше 13).
+        */
+        System.out.println(" Задание 5");
+        int monthNumber = 12;
+        switch (monthNumber) {
+            case 1:
+                System.out.println("Январь");
+                break;
+            case 2:
+                System.out.println("Февраль");
+                break;
+            case 3:
+                System.out.println("Март");
+                break;
+            case 4:
+                System.out.println("Апрель");
+                break;
+            case 5:
+                System.out.println("Май");
+                break;
+            case 6:
+                System.out.println("Июнь");
+                break;
+            case 7:
+                System.out.println("Июль");
+                break;
+            case 8:
+                System.out.println("Август");
+                break;
+            case 9:
+                System.out.println("Сентябрь");
+                break;
+            case 10:
+                System.out.println("Октярь");
+                break;
+            case 11:
+                System.out.println("Ноябрь");
+                break;
+            case 12:
+                System.out.println("Декабрь");
+                break;
+            default:
+                System.out.println("Такого месяца не существует");
+        }
     }
 }
