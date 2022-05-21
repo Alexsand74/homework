@@ -127,6 +127,15 @@ public class ConditionalStatements {
                 }
         System.out.println("Потребуется дней: " + numberDays);
         System.out.println();
+
+        int distance = 95;
+        int days = 1;
+
+        if (distance >= 20)
+            days++;
+        if (distance >= 60)
+            days++;
+        System.out.println("Потребуется дней: " + days++ + " для доставки");
     }
     public static void Month (){
         /*
