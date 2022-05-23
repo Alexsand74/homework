@@ -5,14 +5,17 @@ package ru.skypro.homework;
 public class ConditionalStatements {
 
     public static void main(String[] args) {
-       System.out.println();
-       WebsiteBank();          //Задание 1
-       YearOptsionnayaSystem();//Задание 2
-       LeapYear();             //Задание 3
-       TimeDelivery();         //Задание 4
-       Month();                //Задание 5
+        System.out.println();
+        WebsiteBank();          //Задание 1
+        YearOptsionnayaSystem();//Задание 2
+        LeapYear();             //Задание 3
+        TimeDelivery();         //Задание 4
+        Month();                //Задание 5
+        CreditMap();            //Задание 6
+        Credit();               //Задание 7
     }
-    public static void WebsiteBank (){
+
+    public static void WebsiteBank() {
         /*
         Задание 1
         Представим, что мы работаем в банке. У нашего банка есть сайт, на который можно зайти с компьютера
@@ -30,13 +33,14 @@ public class ConditionalStatements {
          */
         System.out.println(" Задание 1");
         int clientOS = 0;
-        if ( clientOS == 0 ){
+        if (clientOS == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         } else {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
         System.out.println();
     }
+
     public static void YearOptsionnayaSystem() {
         /*
         Задание 2
@@ -58,9 +62,9 @@ public class ConditionalStatements {
         System.out.println(" Задание 2");
         int clientOS = 0;
         int clientDeviceYear = 2012;
-        if ( clientOS == 0 ){
-            if ( clientDeviceYear >= 2015){
-            System.out.println("Установите версию приложения для iOS по ссылке");
+        if (clientOS == 0) {
+            if (clientDeviceYear >= 2015) {
+                System.out.println("Установите версию приложения для iOS по ссылке");
             } else {
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке");
             }
@@ -73,7 +77,8 @@ public class ConditionalStatements {
         }
         System.out.println();
     }
-    public static void LeapYear (){
+
+    public static void LeapYear() {
         /*
         Задание 3
         Напишите программу, которая определяет, является ли год високосным или нет.
@@ -88,18 +93,19 @@ public class ConditionalStatements {
          */
         System.out.println(" Задание 3");
         int year = 2021;
-        System.out.println( year % 100 + " деление на 100");
-        System.out.println( year % 400 + " деление на 400");
-        System.out.println( year % 4 + " деление на 4");
+        System.out.println(year % 100 + " деление на 100");
+        System.out.println(year % 400 + " деление на 400");
+        System.out.println(year % 4 + " деление на 4");
 
-        if ((year % 4  == 0) && (year % 100 != 0) || (year % 400  == 0)){
-            System.out.println( year + " год является високосным");
+        if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
+            System.out.println(year + " год является високосным");
         } else {
-            System.out.println( year + " год не является високосным");
+            System.out.println(year + " год не является високосным");
         }
         System.out.println();
     }
-    public static void  TimeDelivery (){
+
+    public static void TimeDelivery() {
         /*
         Задание 4
         Вернемся к делам банковским. У нас хороший банк, поэтому для наших клиентов мы организуем доставку
@@ -119,12 +125,12 @@ public class ConditionalStatements {
         int limitation = 20;
         int stepDistance = 40;
         int numberDays = 1;
-        if ( deliveryDistance > limitation) {
-                      numberDays += ((deliveryDistance-limitation)/stepDistance);
-                  if ((deliveryDistance-limitation)%stepDistance > 0){
-                      numberDays++;
-                  }
-                }
+        if (deliveryDistance > limitation) {
+            numberDays += ((deliveryDistance - limitation) / stepDistance);
+            if ((deliveryDistance - limitation) % stepDistance > 0) {
+                numberDays++;
+            }
+        }
         System.out.println("Потребуется дней: " + numberDays);
         System.out.println();
 
@@ -135,9 +141,11 @@ public class ConditionalStatements {
             days++;
         if (distance >= 60)
             days++;
-        System.out.println("Потребуется дней: " + days++ + " для доставки");
+        System.out.println("Потребуется дней: " + days + " для доставки");
+        System.out.println();
     }
-    public static void Month (){
+
+    public static void Month() {
         /*
         Задание 5
         Напишите программу, которая определяет по номеру месяца в году, к какому сезону этот месяц принадлежит.
@@ -172,8 +180,10 @@ public class ConditionalStatements {
             default:
                 System.out.println("Такого месяца не существует");
         }
+        System.out.println();
     }
-    public void CreditMap (){
+
+    public static void CreditMap(){
         /*
         Задание 6.
         И снова дела банковские, уже сложнее.
@@ -196,5 +206,80 @@ public class ConditionalStatements {
         – Правила синтаксиса и пунктуации соблюдены.
          */
         System.out.println(" Задание 6");
+        double wage = 0;
+        int age = 19;
+        int salary = 48_000;
+        double limitMinimum = 1.2;
+        double limitMaximum = 1.5;
+        int increaseMinimum = 2;
+        int increaseMaximum = 3;
+        if (age >= 23) {
+            wage = salary * increaseMaximum;
+        } else {
+            wage = salary * increaseMinimum;
+        }
+        if (salary >= 50_000) {
+            wage = wage * limitMinimum;
+        } else if (salary >= 80_000){
+            wage = wage * limitMaximum;
+        }
+           System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + wage + " рублей");
+           System.out.println();
     }
+
+    public static void Credit(){
+        /*
+        Задание 7
+        Расширим задачу с кредитованием. Прежде чем выдавать кредиты наш банк проводит аудит и оценивает
+        клиентов и их возможность выплачивать кредит. Для того, чтобы вывести предварительное решение, нам
+        необходимо использовать данные о возрасте, зарплате и желаемой сумме.
+        Правила следующие:
+        Базовая ставка для клиента — 10% годовых. Срок кредитования — 12 месяцев.
+        Максимальный ежемесячный платеж — 50% от ЗП. Если возраст меньше 23, то добавляем 1% к ставке.
+        Если возраст меньше 30, то добавляем 0.5% к ставке. Если зарплата больше 80_000, уменьшаем ставку на 0.7%.
+        Нам нужно написать программу для предварительного одобрения/отказа заявки по кредиту.
+        Вводные данные: используйте переменные age = 25 для обозначения возраста,salary = 60_000 для обозначения
+        зарплаты,wantedSum = 330_000 для обозначения желаемой суммы кредита.
+        Подсчитайте и выведите ответ, одобрен кредит или нет. На основании зарплаты подсчитайте максимальный
+        допустимый платеж. Если максимальный допустимый платеж по ЗП больше стандартного платежа по кредиту согласно
+         процентной ставке, то кредит одобрен, если меньше — отказан.
+        Пример ответа в консоль: «Максимальный платеж при ЗП *** равен *** рублей. Платеж по кредиту *** рублей.
+         Одобрено/отказано».
+        Критерии оценки:
+         – При изменении значения переменной age результат вывода в консоль изменяется согласно условиям задачи
+         – При изменении значения переменной salary результат вывода в консоль изменяется согласно условиям задачи
+         – Написанный код отрабатывает условия задачи и изменение значений переменных, выводит в консоль
+          корректный результат
+         – Нет вложенности в коде.
+         */
+        System.out.println(" Задание 7");
+        int age = 25;                 //возраст кредитора
+        int salary = 60_000;          //зарплата кредитора
+        int wantedSum = 330_000;      //запрашиваемый кредит
+        double minBid = 0.5;          //если возраст меньше 30 то 0,5% прибавка к ставке
+        double Bid = 0.7;             //если зарплата больше 80_000, уменьшаем ставку на 0.7%
+        double maxBid = 1;            //если возраст меньше 23 то 1% прибавка к ставке
+        int numberMonths = 12;        //количество оплачиваемых месяцев (у нас 12 в году)
+        int monthlyPayment = 0;       //месячный платеж по кредиту
+        double basicBidYear = 10;     //базовая ставка в процентах 10%
+
+        if (age < 30) {
+            basicBidYear += minBid;
+         } else  if (age < 23) {
+            basicBidYear += maxBid;
+          }
+        if (salary > 80_000) {
+            basicBidYear -= Bid;
+        }
+            monthlyPayment = (int)(((1.0*wantedSum/100)*basicBidYear + wantedSum)/numberMonths);
+
+        if (monthlyPayment > salary/2) {
+            System.out.println(" Максимальный платеж при ЗП "+ salary + " равен " + monthlyPayment + " рублей." +
+                    " Платеж по кредиту " + wantedSum + " рублей.  Отказан.");
+        } else {
+            System.out.println(" Максимальный платеж при ЗП "+ salary + " равен " + monthlyPayment + " рублей." +
+                    " Платеж по кредиту " + wantedSum + " рублей.  Одобрен.");
+        }
+    }
+
 }
