@@ -206,22 +206,23 @@ public class ConditionalStatements {
         – Правила синтаксиса и пунктуации соблюдены.
          */
         System.out.println(" Задание 6");
-        double wage = 0;
-        int age = 19;
-        int salary = 48_000;
-        double limitMinimum = 1.2;
-        double limitMaximum = 1.5;
-        int increaseMinimum = 2;
-        int increaseMaximum = 3;
+        int wage = 0;              //Сумма допустимого кредита
+        int age = 19;              //возраст кредитора
+        int salary = 58_000;       //зарплата кредитора
+        double limitMinimum = 1.2; //заработная плата клиента выше (или равно) 50 тыс, мы увеличиваем лимит в 1.2 раза
+        double limitMaximum = 1.5; //заработная плата выше (или равно) 80 тысяч, мы увеличиваем лимит в 1.5 раза
+        int increaseMinimum = 2;   //кредитор младше 23 лет мы предоставляем лимит кредита в размере в 2 зарплат
+        int increaseMaximum = 3;   //кредитор старше (или равно) 23 лет мы предоставляем лимит кредита в размере 3 зарплат
+
         if (age >= 23) {
             wage = salary * increaseMaximum;
         } else {
             wage = salary * increaseMinimum;
         }
         if (salary >= 50_000) {
-            wage = wage * limitMinimum;
+            wage = (int)(wage * limitMinimum);
         } else if (salary >= 80_000){
-            wage = wage * limitMaximum;
+            wage = (int)(wage * limitMaximum);
         }
            System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + wage + " рублей");
            System.out.println();
