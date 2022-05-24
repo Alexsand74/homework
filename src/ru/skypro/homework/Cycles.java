@@ -150,8 +150,18 @@ public class Cycles {
        – В коде не допущено ошибок или неверного использования конструкций; – Все условия задачи выполняются.
        */
         System.out.println("Задача 5");
-      int summa = 1;
+        /*
+         int current = 0, next = 1;
+         for (int i = 0; i < 10; i = i + 2) {
+         System.out.print(current + " ");
+         System.out.print(next + " ");
+         current += next;
+         next += current;
+         }
+         */
+
       int oldSumma = 0;
+      int summa = 1;
       int newSumma = 0;
         System.out.print(oldSumma + " " + summa);
       for (int i = 1; i < 9; i++){
