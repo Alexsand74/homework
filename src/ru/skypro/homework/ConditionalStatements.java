@@ -254,7 +254,7 @@ public class ConditionalStatements {
          – Нет вложенности в коде.
          */
         System.out.println(" Задание 7");
-        int age = 25;                 //возраст кредитора
+        int age = 35;                 //возраст кредитора
         int salary = 60_000;          //зарплата кредитора
         int wantedSum = 330_000;      //запрашиваемый кредит
         double minBid = 0.5;          //если возраст меньше 30 то 0,5% прибавка к ставке
@@ -270,8 +270,9 @@ public class ConditionalStatements {
         } else  if (age < 30) {
             basicBidYear += minBid;
             System.out.println("возраст < 30  ставка = " + basicBidYear);
-         }
+         } else {
             System.out.println("возраст > 30  ставка = " + basicBidYear);
+              }
 
         if (salary > 80_000) {
             basicBidYear -= Bid;
