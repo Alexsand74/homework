@@ -18,14 +18,12 @@ public class Cycles {
         10 9 8 7 6 5 4 3 2 1
          */
         System.out.println("Задача 1");
-        int i = 1;
-        while (i < 11){
-            System.out.print(" " + i);
-            i++;
-        }
+        int i = 0;
+        while (i < 10){
+            System.out.print(" " + ++i);
+                 }
          System.out.println();
          System.out.println();
-            i--;
         for (; i > 0; i--){
             System.out.print(" " + i);
         }
