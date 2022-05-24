@@ -264,11 +264,15 @@ public class ConditionalStatements {
         int monthlyPayment = 0;       //месячный платеж по кредиту
         double basicBidYear = 10;     //базовая ставка в процентах 10%
 
-        if (age < 30) {
-            basicBidYear += minBid;
-         } else  if (age < 23) {
+        if (age < 23) {
             basicBidYear += maxBid;
-          }
+            System.out.println("возраст < 23  ставка = " + basicBidYear);
+        } else  if (age < 30) {
+            basicBidYear += minBid;
+            System.out.println("возраст < 30  ставка = " + basicBidYear);
+         }
+            System.out.println("возраст > 30  ставка = " + basicBidYear);
+
         if (salary > 80_000) {
             basicBidYear -= Bid;
         }
