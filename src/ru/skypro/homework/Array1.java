@@ -73,10 +73,12 @@ public class Array1 {
           - На одной строчке расположены элементы только одного массива
          */
         System.out.println("Задача 2 условие для int");
-        for (int i = 0; i < wei.length; i++ ){
+        int i = 0;
+        while (i < wei.length) {
             String comma = ", ";
-            if (i == wei.length-1) { comma = " ";   }
+            if (i == wei.length-1) { comma = " ";}
             System.out.print( wei [i] + comma );
+            i++;
         }
         System.out.println("\n");
     }
@@ -87,8 +89,9 @@ public class Array1 {
         */
         System.out.println("Задача 2 условие для float");
         for (int i = 0; i < wei.length; i++ ){
-            String comma = ", ";
-            if (i == wei.length-1) { comma = " ";   }
+            String comma;
+            comma = ", ";
+            if (i == wei.length-1) { comma = " "; }
             System.out.print( wei [i] + comma );
         }
         System.out.println("\n");
@@ -114,8 +117,7 @@ public class Array1 {
         System.out.println("Задача 3 условие для int");
         for (int i = wei.length - 1; i > -1 ; i-- ){
             String comma = ", ";
-            int j = i;
-            if (j == 0) { comma = " ";   }
+            if (i == 0) { comma = " ";   }
             System.out.print( wei [i] + comma );
         }
         System.out.println("\n");
@@ -126,31 +128,31 @@ public class Array1 {
         */
         System.out.println("Задача 3 условие для float");
         for (int i = wei.length - 1; i > -1 ; i-- ){
-            String comma = ", ";
-            int j = i;
-            if (j == 0) { comma = " ";   }
+            String comma;
+            comma = ", ";
+            if (i == 0) { comma = " ";   }
             System.out.print( wei [i] + comma );
         }
         System.out.println("\n");
     }
 
     private static void task4Int(int [] wei) {
-        /*
-        4 задача
-        Пройдитесь по первому целочисленному массиву и все нечетные числа в нем
-        сделайте четными (нужно прибавить 1).
-        Важно: код должен работать с любым целочисленным массивом, поэтому для
-        решения задания вам нужно использовать циклы.
-        Распечатайте результат преобразования в консоль.
-         */
+        //
+        //4 задача
+        //Пройдитесь по первому целочисленному массиву и все нечетные числа в нем
+        //сделайте четными (нужно прибавить 1).
+        //Важно: код должен работать с любым целочисленным массивом, поэтому для
+        //решения задания вам нужно использовать циклы.
+        //Распечатайте результат преобразования в консоль.
+        //
         System.out.println("Задача 4 условие для int");
-        String comma = ", ";
+        String comma;
+        comma = ", ";
         for (int i = 0; i < wei.length; i++ ){
             if ( wei[i] % 2 != 0 ) {
                 wei[i]++;
             }
-
-            if (++i == wei.length) { comma = " ";   }
+            if (++i == wei.length) { comma = " "; }
             i--;
             System.out.print( wei [i] + comma );
         }
