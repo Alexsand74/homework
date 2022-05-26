@@ -1,4 +1,5 @@
 package ru.skypro.homework;
+
 import java.util.Arrays;
 
 public class Array1 {
