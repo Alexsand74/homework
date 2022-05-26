@@ -47,19 +47,19 @@ public class Array1 {
         System.out.println();
 
         // Задача 2 вывод массивов на консоль в порядке возрастания индексов
-        Task2int(weight);
-        Task2flot(arrey);
-        Task2int(variable);
+        task2Int(weight);
+        task2Flot(arrey);
+        task2Int(variable);
         // Задача 3 вывод массивов на консоль в порядке убывания индексов
-        Task3int(weight);
-        Task3flot(arrey);
-        Task3int(variable);
+        task3Int(weight);
+        task3Flot(arrey);
+        task3Int(variable);
         // Задача 4 вывод массива и замена нечетных элементов на четные
-        Task4int(weight);
-        Task4int(variable);
+        task4Int(weight);
+        task4Int(variable);
     }
 
-    public static void Task2int(int [] wei) {
+    private static void task2Int(int [] wei) {
         /*
         2 задача
         Пройдите по каждому из трех массивов и распечатайте все элементы всех трех массивов,
@@ -74,28 +74,26 @@ public class Array1 {
         System.out.println("Задача 2 условие для int");
         for (int i = 0; i < wei.length; i++ ){
             String comma = ", ";
-             int j = i;
-             if (++j == wei.length) { comma = " ";   }
+            if (i == wei.length-1) { comma = " ";   }
             System.out.print( wei [i] + comma );
         }
         System.out.println("\n");
     }
 
-    public static void Task2flot(float [] wei) {
+    private static void task2Flot(float [] wei) {
         /*
         2 задача описание выше
         */
         System.out.println("Задача 2 условие для float");
         for (int i = 0; i < wei.length; i++ ){
             String comma = ", ";
-            int j = i;
-            if (++j == wei.length) { comma = " ";   }
+            if (i == wei.length-1) { comma = " ";   }
             System.out.print( wei [i] + comma );
         }
         System.out.println("\n");
     }
 
-    public static void Task3int(int [] wei) {
+    private static void task3Int(int [] wei) {
         /*
         3 задача
         Теперь ваша задача – распечатать все элементы всех трех массивов, но начинать нужно не
@@ -121,7 +119,7 @@ public class Array1 {
         }
         System.out.println("\n");
     }
-    public static void Task3flot(float [] wei) {
+    private static void task3Flot(float [] wei) {
         /*
         3 задача описание выше
         */
@@ -135,7 +133,7 @@ public class Array1 {
         System.out.println("\n");
     }
 
-    public static void Task4int(int [] wei) {
+    private static void task4Int(int [] wei) {
         /*
         4 задача
         Пройдитесь по первому целочисленному массиву и все нечетные числа в нем
@@ -151,8 +149,8 @@ public class Array1 {
                 wei[i]++;
             }
 
-            int j = i;
-            if (++j == wei.length) { comma = " ";   }
+            if (++i == wei.length) { comma = " ";   }
+            i--;
             System.out.print( wei [i] + comma );
         }
         System.out.println("\n");
