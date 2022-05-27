@@ -277,14 +277,13 @@ public class Array1 {
         – В консоль выведен результат решения задания.
          */
         System.out.println("Задача 8 Необходимо найти два числа, сумма которых равна −2 ");
-        int [] arr ={-6,2,5,-8,8,4,-7,12,1};
+        int[] arr = new int[]{-6, 2, 5, -8, 8, 4, -7, 12, 1};
         System.out.println(" Дан вот такой массив нам данн: "+ Arrays.toString(arr));
         Arrays.sort(arr); // сортировка массива по возрастанию
         System.out.println(" маcсив отсортирован по возрастанию : "+ Arrays.toString(arr));
         boolean markerLocationsSums = false;// маркер того что условие внутри выполнилось
         for (int i = 0; i < arr.length; i++ ){
-            int k = i + 1;
-            for (; k < arr.length; k++){
+           for (int k = i + 1; k < arr.length; k++){
                 if (arr[i]+arr[k] == -2){
                     markerLocationsSums = true;
                     System.out.println(" первое число: " + arr[i] + " второе число: " + arr[k]);
@@ -315,16 +314,14 @@ public class Array1 {
         Arrays.sort(arr); // сортировка массива по возрастанию
         System.out.println(" маcсив отсортирован по возрастанию : "+ Arrays.toString(arr));
         boolean markerLocationsSums = false;// маркер того что условие внутри выполнилось
-        for (int i = 0; i < arr.length; i++ ){
-            int k = i + 1;
-            for (; k < arr.length; k++){
-                if (arr[i]+arr[k] == -2){
+        for (int i = 0; i < arr.length; i++ ) {
+            for (int k = i + 1; k < arr.length; k++) {
+                if (arr[i] + arr[k] == -2) {
                     markerLocationsSums = true;
                     System.out.println(" первое число: " + arr[i] + " второе число: " + arr[k]);
 
                 }
             }
-
         }
         if ( !markerLocationsSums ){
             System.out.println(" чисел сумма которых дает -2 в массиве нет ");
