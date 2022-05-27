@@ -278,19 +278,17 @@ public class Array1 {
          */
         System.out.println("Задача 8 Необходимо найти два числа, сумма которых равна −2 ");
         int[] arr = new int[]{-6, 2, 5, -8, 8, 4, -7, 12, 1};
-        System.out.println(" Дан вот такой массив нам данн: "+ Arrays.toString(arr));
-        Arrays.sort(arr); // сортировка массива по возрастанию
-        System.out.println(" маcсив отсортирован по возрастанию : "+ Arrays.toString(arr));
+        System.out.println(" Вот   такой   массив   нам   данн : "+ Arrays.toString(arr));
         boolean markerLocationsSums = false;// маркер того что условие внутри выполнилось
-        for (int i = 0; i < arr.length; i++ ){
+        int i = 0;
+        while ( i < arr.length && !markerLocationsSums){
            for (int k = i + 1; k < arr.length; k++){
                 if (arr[i]+arr[k] == -2){
                     markerLocationsSums = true;
                     System.out.println(" первое число: " + arr[i] + " второе число: " + arr[k]);
                     break;
                 }
-            }
-           if ( markerLocationsSums ){break;}
+            }  i++;
         }
         if ( !markerLocationsSums ){
             System.out.println(" чисел сумма которых дает -2 в массиве нет ");
@@ -310,16 +308,15 @@ public class Array1 {
          */
         System.out.println("Задача 9 Необходимо найти все пары чисел, в массиве, сумма которых равна −2 ");
         int [] arr ={-6,2,5,-8,8,4,-7,12,1};
-        System.out.println(" Дан вот такой массив нам данн: "+ Arrays.toString(arr));
+        System.out.println(" Вот   такой   массив   нам   данн : "+ Arrays.toString(arr));
         Arrays.sort(arr); // сортировка массива по возрастанию
-        System.out.println(" маcсив отсортирован по возрастанию : "+ Arrays.toString(arr));
+        System.out.println(" Маcсив отсортирован по возрастанию: "+ Arrays.toString(arr));
         boolean markerLocationsSums = false;// маркер того что условие внутри выполнилось
         for (int i = 0; i < arr.length; i++ ) {
             for (int k = i + 1; k < arr.length; k++) {
                 if (arr[i] + arr[k] == -2) {
                     markerLocationsSums = true;
                     System.out.println(" первое число: " + arr[i] + " второе число: " + arr[k]);
-
                 }
             }
         }
