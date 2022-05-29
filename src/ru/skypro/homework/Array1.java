@@ -2,6 +2,8 @@ package ru.skypro.homework;
 
 import java.util.Arrays;
 
+import static java.lang.System.*;
+
 public class Array1 {
     public static void main (String[] args) {
         /*
@@ -28,24 +30,24 @@ public class Array1 {
           - Массив с дробными числами создан и сразу заполнен значениями
           - Создан любой произвольный массив одним из двух способов, рассмотренных в уроке
          */
-        System.out.println("Задача 1 условие 1");
+        out.println("Задача 1 условие 1");
         int [] weight = new int [3];
         int j = 1;
         for (int i = 0; i < weight.length; i++){
                weight[i] = j++;
         }
-        System.out.println(Arrays.toString(weight));
-        System.out.println();
+        out.println(Arrays.toString(weight));
+        out.println();
 
-        System.out.println("Задача 1 условие 2");
+        out.println("Задача 1 условие 2");
         float [] arrey = {1.57f, 7.654f, 9.986f};
-        System.out.println(Arrays.toString(arrey));
-        System.out.println();
+        out.println(Arrays.toString(arrey));
+        out.println();
 
-        System.out.println("Задача 1 условие 3");
+        out.println("Задача 1 условие 3");
         int [] variable = {90, 91, 93, 92, 85, 87, 84, 83};
-        System.out.println(Arrays.toString(variable));
-        System.out.println();
+        out.println(Arrays.toString(variable));
+        out.println();
 
         // Задача 2 вывод массивов на консоль в порядке возрастания индексов
         task2Int(weight);
@@ -82,29 +84,29 @@ public class Array1 {
           - В консоль выведены все элементы третьего массива в верном порядке через запятую
           - На одной строчке расположены элементы только одного массива
          */
-        System.out.println("Задача 2 условие для int");
+        out.println("Задача 2 условие для int");
         int i = 0;
         while (i < wei.length) {
             String comma = ", ";
             if (i == wei.length-1) { comma = " ";}
-            System.out.print( wei [i] + comma );
+            out.print( wei [i] + comma );
             i++;
         }
-        System.out.println("\n");
+        out.println("\n");
     }
 
     private static void task2Flot(float [] wei) {
         /*
         2 задача описание выше
         */
-        System.out.println("Задача 2 условие для float");
+        out.println("Задача 2 условие для float");
         for (int i = 0; i < wei.length; i++ ){
             String comma;
             comma = ", ";
             if (i == wei.length-1) { comma = " "; }
-            System.out.print( wei [i] + comma );
+            out.print( wei [i] + comma );
         }
-        System.out.println("\n");
+        out.println("\n");
     }
 
     private static void task3Int(int [] wei) {
@@ -124,26 +126,26 @@ public class Array1 {
          9.986, 7.654, 1.57
         *произвольные элементы третьего массива в обратном порядке*
          */
-        System.out.println("Задача 3 условие для int");
+        out.println("Задача 3 условие для int");
         for (int i = wei.length - 1; i > -1 ; i-- ){
             String comma = ", ";
             if (i == 0) { comma = " ";   }
-            System.out.print( wei [i] + comma );
+            out.print( wei [i] + comma );
         }
-        System.out.println("\n");
+        out.println("\n");
     }
     private static void task3Flot(float [] wei) {
         /*
         3 задача описание выше
         */
-        System.out.println("Задача 3 условие для float");
+        out.println("Задача 3 условие для float");
         for (int i = wei.length - 1; i > -1 ; i-- ){
             String comma;
             comma = ", ";
             if (i == 0) { comma = " ";   }
-            System.out.print( wei [i] + comma );
+            out.print( wei [i] + comma );
         }
-        System.out.println("\n");
+        out.println("\n");
     }
 
     private static void task4Int(int [] wei) {
@@ -155,7 +157,7 @@ public class Array1 {
         //решения задания вам нужно использовать циклы.
         //Распечатайте результат преобразования в консоль.
         //
-        System.out.println("Задача 4 условие для int");
+        out.println("Задача 4 условие для int");
         String comma;
         comma = ", ";
         for (int i = 0; i < wei.length; i++ ){
@@ -164,9 +166,9 @@ public class Array1 {
             }
             if (++i == wei.length) { comma = " "; }
             i--;
-            System.out.print( wei [i] + comma );
+            out.print( wei [i] + comma );
         }
-        System.out.println("\n");
+        out.println("\n");
     }
 
     private static void task5Int() {
@@ -186,7 +188,7 @@ public class Array1 {
         –При изменении единицы на другое значение матрица выводится в консоль корректно.
         –Для вывода результата в консоль используется один цикл.
        */
-        System.out.println("Задача 5 Двухмерный массив заполнне обоих диагноалей единицами ");
+        out.println("Задача 5 Двухмерный массив заполнне обоих диагноалей единицами ");
         int[][] matrix = new int[7][7];
 
         for (int i = 0; i < matrix.length; i++)
@@ -198,11 +200,11 @@ public class Array1 {
             }
         for (int[] row : matrix) {
             for (int column : row) {
-                System.out.print(column + " ");
+                out.print(column + " ");
             }
-            System.out.println();
+            out.println();
         }
-        System.out.println("\n");
+        out.println("\n");
     }
     private static void task6Int() {
         /*
@@ -220,14 +222,14 @@ public class Array1 {
          – В консоль выведен результат программы после преобразований массива.
          – Программа выводит корректный результат при смене значений внутри массива.
          */
-        System.out.println("Задача 6 перевернуть элементы массива в обратном порядке ");
+        out.println("Задача 6 перевернуть элементы массива в обратном порядке ");
         int [] arr ={5,4,3,2,1};
-        System.out.println(" Коллега оставил нам не правельный масив: "+ Arrays.toString(arr));
+        out.println(" Коллега оставил нам не правельный масив: "+ Arrays.toString(arr));
         int [] arrTrue = new int[ arr.length];
         for (int i = 0; i < arr.length; i++ ){
             arrTrue [i] = arr [ (arr.length -1) - i];
         }
-        System.out.println(" Поправили массив  коллеги на правельный: "+ Arrays.toString(arrTrue));
+        out.println(" Поправили массив  коллеги на правельный: "+ Arrays.toString(arrTrue));
         System.out.println("\n");
     }
 
@@ -249,9 +251,9 @@ public class Array1 {
           – В консоль выведен результат программы после преобразований массива.
           – Программа выводит корректный результат при смене значений внутри массива.
          */
-        System.out.println("Задача 7 перевернуть элементы массива в обратном порядке ");
+        out.println("Задача 7 перевернуть элементы массива в обратном порядке ");
         int [] arr ={5,8,2,3,9,11};
-        System.out.println(" Коллега оставил нам не правельный масив: "+ Arrays.toString(arr));
+        out.println(" Коллега оставил нам не правельный масив: "+ Arrays.toString(arr));
          int n,m;
         for (int i = 0; i < arr.length/2; i++ ){
                n = arr [i];
@@ -259,8 +261,8 @@ public class Array1 {
                arr [i] = m;
                arr [ (arr.length -1) - i] = n;
         }
-        System.out.println(" Поправили массив  коллеги на правельный: "+ Arrays.toString(arr));
-        System.out.println("\n");
+        out.println(" Поправили массив  коллеги на правельный: "+ Arrays.toString(arr));
+        out.println("\n");
     }
     private static void task8Int() {
         /*
@@ -276,9 +278,12 @@ public class Array1 {
         – При изменении значений массива в консоль выводится корректный результат.
         – В консоль выведен результат решения задания.
          */
-        System.out.println("Задача 8 Необходимо найти два числа, сумма которых равна −2 ");
+        out.println("Задача 8 Необходимо найти два числа, сумма которых равна −2 ");
         int[] arr = new int[]{-6, 2, 5, -8, 8, 4, -7, 12, 1};
-        System.out.println(" Вот   такой   массив   нам   данн : "+ Arrays.toString(arr));
+        out.println(" Вот   такой   массив   нам   данн : "+ Arrays.toString(arr));
+        /* Возможные решения
+         Решение 1
+        -----------------------------------------------
         boolean markerLocationsSums = false;// маркер того что условие внутри выполнилось
         int i = 0;
         while ( i < arr.length && !markerLocationsSums){
@@ -293,7 +298,31 @@ public class Array1 {
         if ( !markerLocationsSums ){
             System.out.println(" чисел сумма которых дает -2 в массиве нет ");
         }
-        System.out.println("\n");
+         Решение 2
+        -----------------------------------------------
+        for ( int i = 0; i < arr.length; i++){
+            for (int k = i + 1; k < arr.length; k++)
+                if (arr[i] + arr[k] == -2) {
+                    out.println(" первое число: " + arr[i] + " второе число: " + arr[k]);
+                    out.println("\n");
+                    return;  }
+        }
+        out.println(" чисел сумма которых дает -2 в массиве нет ");
+        out.println("\n");
+         Решение 3
+        ------------------------------------------------ */
+        boolean markerLocationsSums = false;// маркер того что условие внутри выполнилось
+        for ( int i = 0; i < arr.length && !markerLocationsSums; i++){
+            for (int k = i + 1; k < arr.length; k++)
+                if (arr[i] + arr[k] == -2) {
+                    markerLocationsSums = true;
+                    out.println(" первое число: " + arr[i] + " второе число: " + arr[k]);
+                    break;  }
+        }
+        if ( !markerLocationsSums ){
+            System.out.println(" чисел сумма которых дает -2 в массиве нет ");
+        }
+        out.println("\n");
     }
 
     private static void task9Int() {
@@ -306,23 +335,23 @@ public class Array1 {
         – При изменении значений массива в консоль выводится корректный результат.
         – В консоль выведен результат решения задания.
          */
-        System.out.println("Задача 9 Необходимо найти все пары чисел, в массиве, сумма которых равна −2 ");
+        out.println("Задача 9 Необходимо найти все пары чисел, в массиве, сумма которых равна −2 ");
         int [] arr ={-6,2,5,-8,8,4,-7,12,1};
-        System.out.println(" Вот   такой   массив   нам   данн : "+ Arrays.toString(arr));
+        out.println(" Вот   такой   массив   нам   данн : "+ Arrays.toString(arr));
         Arrays.sort(arr); // сортировка массива по возрастанию
-        System.out.println(" Маcсив отсортирован по возрастанию: "+ Arrays.toString(arr));
+        out.println(" Маcсив отсортирован по возрастанию: "+ Arrays.toString(arr));
         boolean markerLocationsSums = false;// маркер того что условие внутри выполнилось
         for (int i = 0; i < arr.length; i++ ) {
             for (int k = i + 1; k < arr.length; k++) {
                 if (arr[i] + arr[k] == -2) {
                     markerLocationsSums = true;
-                    System.out.println(" первое число: " + arr[i] + " второе число: " + arr[k]);
+                    out.println(" первое число: " + arr[i] + " второе число: " + arr[k]);
                 }
             }
         }
         if ( !markerLocationsSums ){
-            System.out.println(" чисел сумма которых дает -2 в массиве нет ");
+            out.println(" чисел сумма которых дает -2 в массиве нет ");
         }
-        System.out.println("\n");
+        out.println("\n");
     }
  }
