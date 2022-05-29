@@ -30,16 +30,17 @@ public class Array1 {
           - Массив с дробными числами создан и сразу заполнен значениями
           - Создан любой произвольный массив одним из двух способов, рассмотренных в уроке
          */
-        out.println("Задача 1 условие 1");
+        out.println("Задача 1 условие 1 Объявить массив заполненный тремя цифрами – 1, 2 и 3 с помощью ключевого слова new   ");
         int [] weight = new int [3];
-        int j = 1;
-        for (int i = 0; i < weight.length; i++){
-               weight[i] = j++;
-        }
+          for (int i = 0; i < weight.length; i++){
+               weight[i] = ++i;
+               i--;
+          }
         out.println(Arrays.toString(weight));
         out.println();
 
-        out.println("Задача 1 условие 2");
+        out.println("Задача 1 условие 2 Объявите Массив, в котором три дробных числа – 1.57, 7.654, 9.986 –" +
+                "  сразу заполнив его значениями." );
         float [] arrey = {1.57f, 7.654f, 9.986f};
         out.println(Arrays.toString(arrey));
         out.println();
@@ -188,16 +189,16 @@ public class Array1 {
         –При изменении единицы на другое значение матрица выводится в консоль корректно.
         –Для вывода результата в консоль используется один цикл.
        */
-        out.println("Задача 5 Двухмерный массив заполнне обоих диагноалей единицами ");
+        out.println("Задача 5 Двухмерный массив заполнне обоих диагoналей единицами ");
         int[][] matrix = new int[7][7];
 
-        for (int i = 0; i < matrix.length; i++)
-        {   for (int k = 0; k < matrix.length; k++) {
-                  if ( (i == k) ||  (k == (matrix.length-1) - i )){ matrix [i][k] = 1;
+        for (int i = 0; i < matrix.length; i++){
+            for (int k = 0; k < matrix.length; k++) {
+                  if ( (i == k) ||  (k == (matrix.length-1) - i )){
+                      matrix [i][k] = 1;
                    } else { matrix [i][k] = 0; }
-
-                }
             }
+        }
         for (int[] row : matrix) {
             for (int column : row) {
                 out.print(column + " ");
@@ -282,7 +283,7 @@ public class Array1 {
         int[] arr = new int[]{-6, 2, 5, -8, 8, 4, -7, 12, 1};
         out.println(" Вот   такой   массив   нам   данн : "+ Arrays.toString(arr));
         /* Возможные решения
-         Решение 1
+           Решение 1
         -----------------------------------------------
         boolean markerLocationsSums = false;// маркер того что условие внутри выполнилось
         int i = 0;
@@ -298,8 +299,8 @@ public class Array1 {
         if ( !markerLocationsSums ){
             System.out.println(" чисел сумма которых дает -2 в массиве нет ");
         }
-         Решение 2
-        -----------------------------------------------
+           Решение 2
+        ----------------------------------------------- */
         for ( int i = 0; i < arr.length; i++){
             for (int k = i + 1; k < arr.length; k++)
                 if (arr[i] + arr[k] == -2) {
@@ -309,8 +310,8 @@ public class Array1 {
         }
         out.println(" чисел сумма которых дает -2 в массиве нет ");
         out.println("\n");
-         Решение 3
-        ------------------------------------------------ */
+         /* Решение 3
+        ------------------------------------------------
         boolean markerLocationsSums = false;// маркер того что условие внутри выполнилось
         for ( int i = 0; i < arr.length && !markerLocationsSums; i++){
             for (int k = i + 1; k < arr.length; k++)
@@ -323,6 +324,7 @@ public class Array1 {
             System.out.println(" чисел сумма которых дает -2 в массиве нет ");
         }
         out.println("\n");
+        */
     }
 
     private static void task9Int() {
