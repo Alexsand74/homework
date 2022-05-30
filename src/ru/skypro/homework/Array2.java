@@ -123,6 +123,7 @@ public class Array2 {
         int size =  reverseFullName.length - 1; // вводим переменную размер, что бы её не считать постоянно в итерациях цикла
         char min, max;
         for (int i = 0; i < reverseFullName.length / 2 ; i++) {
+
             min = reverseFullName [i];
             max = reverseFullName [ size - i];
             reverseFullName [i] = max;
