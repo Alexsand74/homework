@@ -38,7 +38,7 @@ public class Array2 {
         summa = sumPerMonth( arr);          // вызов задачи  №1 сумма всех выплат за месяц
         maxMinSumDay( arr);                 // вызов задачи  №2 вывод дней с максимальной и минимальной тратой
         averageSumDay( summa, arr);         // вызов задаич  №3 расчет средней суммы трат в день
-        coupWithBeginnings_on_theEnd();     // вызов задачи  №4 переворот строки по символьно с начала на конец
+        coupWithBeginningsonTheEnd();     // вызов задачи  №4 переворот строки по символьно с начала на конец
 
     }
     private static int[] generateRandomArray() {
@@ -102,7 +102,7 @@ public class Array2 {
         System.out.println ("Средняя сумма трат за месяц составила  " + result + " рублей.");
         System.out.println ();
     }
-    private static void coupWithBeginnings_on_theEnd (){
+    private static void coupWithBeginningsonTheEnd(){
         /*
         Задание 4
         Отойдем от подсчетов.
@@ -122,18 +122,21 @@ public class Array2 {
         System.out.println (Arrays.toString (reverseFullName));
         int size =  reverseFullName.length - 1; // вводим переменную размер, что бы её не считать постоянно в итерациях цикла
         char min, max;
-        for (int i = 0; i < reverseFullName.length / 2 ; i++) {
-
-            min = reverseFullName [i];
-            max = reverseFullName [ size - i];
-            reverseFullName [i] = max;
-            reverseFullName [size - i] = min;
+        //for (int i = 0; i < reverseFullName.length / 2 ; i++) { // в этом цикле массив обменивает конечные элементы на начальные
+        //    min = reverseFullName [i];
+        //    max = reverseFullName [ size - i];
+        //    reverseFullName [i] = max;
+        //    reverseFullName [size - i] = min;
+        //   }
+        for (int i = size; i > -1 ; i-- ){ // Просто выводится массив с последнего своего элемента к начальному
+            System.out.print( reverseFullName[i] );
         }
-        System.out.print ("Символьный массив после обработки - ");
-        System.out.println(Arrays.toString (reverseFullName));
-        for (char symbol : reverseFullName){
-            System.out.print(symbol);
-        }
-        System.out.println ();
+           System.out.println ();
+        //  System.out.print ("Символьный массив после обработки - ");
+        //  System.out.println(Arrays.toString (reverseFullName));
+          for (char symbol : reverseFullName){
+           System.out.print(symbol);
+          }
+            System.out.println ();
     }
 }
