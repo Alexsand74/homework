@@ -75,4 +75,7 @@ public class LineString {
         System.out.println (fullЁNotName);
         System.out.println ();
     }
+    private static void  transformationSurnames () {
+
+    }
 }
